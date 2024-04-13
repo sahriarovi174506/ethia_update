@@ -1,0 +1,1183 @@
+/*======================
+   00. Google fonts
+========================*/
+
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+
+@font-face {
+  font-family: "Branch";
+  src: url("../fonts/Branch-Regular.eot");
+  src: url("../fontsBranch-Regular.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/Branch-Regular.woff2") format("woff2"),
+    url("../fonts/Branch-Regular.woff") format("woff"),
+    url("../fonts/Branch-Regular.ttf") format("truetype"),
+    url("../fonts/Branch-Regular.svg#Branch-Regular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Branch";
+  src: url("../fonts/Branch-Regular_1.eot");
+  src: url("../fonts/Branch-Regular_1.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/Branch-Regular_1.woff2") format("woff2"),
+    url("../fonts/Branch-Regular_1.woff") format("woff"),
+    url("../fonts/Branch-Regular_1.ttf") format("truetype"),
+    url("../fonts/Branch-Regular_1.svg#Branch-Regular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Branch";
+  src: url("../fonts/Branch-Regular_2.eot");
+  src: url("../fonts/Branch-Regular_2.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/Branch-Regular_2.woff2") format("woff2"),
+    url("../fonts/Branch-Regular_2.woff") format("woff"),
+    url("../fonts/Branch-Regular_2.ttf") format("truetype"),
+    url("../fonts/Branch-Regular_2.svg#Branch-Regular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/*======================
+   01. Google fonts
+========================*/
+:root {
+  --kombu-green: #303c30;
+  --white-chocolate: #ede7da;
+  --liver-chestnut: #4e4138;
+  --dark: #151a15;
+  --black: #000;
+  --white: #fff;
+  --gray: #e5e5e5;
+  --dark-gray: #494949;
+  --laurel-green: #a0b8a0;
+}
+/*======================
+   02. Basic css
+========================*/
+html {
+  font-size: 62.5%;
+}
+a,
+button,
+img {
+  transition: 0.3s;
+}
+html,
+body,
+div,
+span,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+strong,
+i,
+ol,
+ul,
+li,
+form,
+label,
+footer,
+header,
+menu,
+nav,
+section {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  color: var(--dark);
+  /* font-family: "Poppins", sans-serif; */
+  font-family: "Lato", sans-serif;
+  /* font-family: "Open Sans", sans-serif; */
+  line-height: 1.5;
+  font-weight: 400;
+  font-style: normal;
+  background-color: var(--white-chocolate);
+  font-size: 1.6rem;
+}
+a {
+  color: var(--dark);
+  text-decoration: none;
+}
+a:hover,
+button:hover {
+  text-decoration: none;
+  color: var(--dark);
+}
+
+ol,
+ul {
+  list-style: none;
+}
+img {
+  max-width: 100%;
+}
+button:focus,
+a:focus,
+input:focus,
+textarea:focus {
+  outline: none;
+}
+/* page loader  */
+#preloader {
+  position: fixed;
+  background: #fff;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 99999;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.loader3 {
+  width: 6rem;
+  height: 6rem;
+  display: inline-block;
+  padding: 0rem;
+  text-align: left;
+}
+
+.loader3 span {
+  position: absolute;
+  display: inline-block;
+  width: 6rem;
+  height: 6rem;
+  border-radius: 100%;
+  background: var(--light-yellow);
+  -webkit-animation: loader3 1.5s linear infinite;
+  animation: loader3 1.5s linear infinite;
+}
+
+.loader3 span:last-child {
+  animation-delay: -0.9s;
+  -webkit-animation-delay: -0.9s;
+}
+
+@keyframes loader3 {
+  0% {
+    transform: scale(0, 0);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(1, 1);
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes loader3 {
+  0% {
+    -webkit-transform: scale(0, 0);
+    opacity: 0.8;
+  }
+  100% {
+    -webkit-transform: scale(1, 1);
+    opacity: 0;
+  }
+}
+
+.owl-dots {
+  text-align: center;
+}
+button.owl-dot {
+  padding: 0.4rem;
+  border-radius: 50%;
+  background-color: #e1d9c9;
+  margin: 0 0.3rem;
+}
+button.owl-dot.active {
+  background-color: var(--liver-chestnut);
+}
+.common-btn {
+  color: var(--kombu-green);
+  font-weight: 600;
+  background: transparent;
+  border: 0.1rem solid var(--kombu-green);
+  border-radius: 50rem;
+  padding: 1.8rem 3.2rem;
+  display: inline-flex;
+  font-size: 1.6rem;
+  line-height: 1.05;
+  column-gap: 1rem;
+}
+
+a.common-btn img {
+  width: 5rem;
+}
+.common-btn-wrap {
+  text-align: center;
+}
+/*======================
+   03. Section Title
+========================*/
+.section-title {
+  text-align: center;
+}
+.section-title h2 {
+  font-size: 1.8rem;
+  font-weight: normal;
+  margin-bottom: 4rem;
+  font-style: italic;
+}
+
+/*======================
+    Header Css
+========================*/
+header {
+  padding: 3rem 0;
+}
+.header-content-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header-gift a {
+  display: inline-flex;
+  height: 3.5rem;
+  width: 3.5rem;
+  background-color: var(--liver-chestnut);
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+.header-gift a img {
+  width: 1.5rem;
+}
+.hamburger-icon {
+  display: none;
+}
+.header-logo-mobile {
+  display: none;
+}
+.header-menu .main-menu {
+  max-width: 100rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 3.4rem;
+}
+.main-menu .header-logo {
+  padding-left: 8rem;
+  padding-right: 20rem;
+}
+.main-menu .header-logo img {
+  width: 15rem;
+}
+.main-menu li.menu-cross {
+  display: none;
+}
+.cart-search .search-icon {
+  margin-right: 3.4rem;
+  margin-left: 3.4rem;
+}
+.cart-search .cart-icon {
+  position: relative;
+}
+.cart-search .cart-icon > div {
+  height: 1.9rem;
+  width: 1.9rem;
+  background-color: var(--laurel-green);
+  position: absolute;
+  border-radius: 50%;
+  top: -0.5rem;
+  left: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+}
+.cart-search .search-icon img {
+  width: 3.2rem;
+}
+.cart-search .cart-icon img {
+  width: 3.2rem;
+}
+.cart-icon span {
+  margin-left: 0.8rem;
+}
+.header-gift {
+  padding-right: 2rem;
+}
+/*======================
+    Banner Css
+========================*/
+.banner-sec {
+  padding-bottom: 24rem;
+  position: relative;
+}
+.banner-corner-img {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 26.5rem;
+}
+.banner-img {
+  position: relative;
+}
+.banner-img img:first-child {
+    width: 56rem;
+}
+.banner-img .banner-small-img {
+  position: absolute;
+  width: 24rem;
+  bottom: -13rem;
+  right: 13rem;
+}
+.banner-line {
+  height: 13.7rem;
+  width: 0.1rem;
+  background-color: #4e41383d;
+  display: inline-block;
+  position: absolute;
+  bottom: -22rem;
+  right: 0;
+}
+.banner-content {
+  max-width: 58.5rem;
+  margin-left: auto;
+}
+.banner-btn .common-btn {
+  background-color: var(--liver-chestnut);
+  color: var(--white);
+  margin-top: 2.7rem;
+}
+.banner-content h1 {
+  font-size: 6.4rem;
+  line-height: 1.05;
+  font-weight: 300;
+}
+.banner-customer {
+  display: flex;
+  gap: 1.8rem;
+  align-items: center;
+  max-width: 30rem;
+  margin-top: 12rem;
+}
+.banner-customer .customer-img img {
+  width: 8rem;
+}
+.banner-customer p {
+  line-height: 1.45;
+}
+.banner-customer a {
+  font-weight: 700;
+  font-size: 1.8rem;
+  line-height: 1.45;
+  text-decoration: underline;
+}
+/*======================
+    How work Css
+========================*/
+.how-work-sec {
+  padding: 6.4rem 0 12.8rem 0;
+  position: relative;
+}
+.ethia-shape-img {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  opacity: 0.1;
+}
+.how-work-content-wrap {
+  max-width: 125rem;
+  margin: auto;
+}
+.how-work-content-wrap .with-sparkle-icon {
+  position: relative;
+}
+.how-work-content-wrap .with-sparkle-icon img {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1.6rem;
+}
+.work-sparkle-start {
+  left: 0;
+}
+.work-sparkle-end {
+  right: 0;
+}
+.how-work-content {
+  text-align: center;
+}
+.how-work-content > div > span {
+  font-family: "Branch";
+  width: 7.2rem;
+  height: 7.2rem;
+  display: inline-flex;
+  border: 0.1rem solid #4e41381f;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 2.75rem;
+  color: var(--liver-chestnut);
+}
+.how-work-content h3 {
+  font-size: 3rem;
+  line-height: 1.15;
+  color: var(--liver-chestnut);
+  width: 21.5rem;
+  margin: 2.4rem auto 1.1rem auto;
+}
+.how-work-content p {
+  max-width: 25.98rem;
+  margin: auto;
+  font-size: 1.3rem;
+  line-height: 1.45;
+  text-transform: uppercase;
+}
+/*======================
+    Best selling Css
+========================*/
+.best-selling-sec {
+  background-color: var(--white);
+  padding: 6.4rem 0 12.8rem 0;
+}
+.product-box-wrap {
+  max-width: 106rem;
+  margin: auto;
+}
+.selling-product-box {
+  text-align: center;
+}
+.selling-product.item {
+  padding-top: 1.2rem;
+}
+.product-img {
+  position: relative;
+}
+.selling-product-box .product-img span {
+  display: inline-flex;
+  height: 5.5rem;
+  width: 5.5rem;
+  border-radius: 50%;
+  background-color: #f4b983;
+  font-size: 1.2rem;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: -1rem;
+  right: 10rem;
+  opacity: 0;
+}
+.selling-product-box.with-badge .product-img span {
+  opacity: 1;
+}
+.product-img img {
+  width: 32.5rem;
+}
+.product-details {
+  margin-top: 2.5rem;
+}
+.product-details p {
+  font-size: 1.1rem;
+  line-height: 1.45;
+  color: var(--liver-chestnut);
+}
+.product-details h3 a {
+  width: 20.5rem;
+  display: inline-block;
+  font-size: 1.8rem;
+  line-height: 1.35;
+  margin: 1.2rem auto;
+}
+.product-details a.buy-link {
+  font-size: 1.6rem;
+  line-height: 1.45;
+  text-decoration: underline;
+  font-weight: 700;
+}
+.best-selling-sec .common-btn-wrap {
+  margin-top: 4rem;
+}
+/*======================
+    Tailored Css
+========================*/
+.tailored-sec {
+  padding: 12.8rem 0 6.4rem 0;
+  background-color: var(--white);
+}
+.tailored-start {
+  padding: 6.4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: var(--laurel-green);
+  color: var(--kombu-green);
+  height: 54rem;
+  margin-top: 4.8rem;
+}
+.tailored-head {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+.tailored-head img {
+  width: 7.2rem;
+}
+.tailored-head h3 {
+  font-size: 3rem;
+  line-height: 1.15;
+}
+.tailored-head p {
+  font-size: 1.2rem;
+  line-height: 1.45;
+}
+.tailored-start > div > p {
+  font-size: 2.4rem;
+  line-height: 1.25;
+  max-width: 45rem;
+  margin: 2.8rem 0;
+}
+.tailored-middle {
+  display: flex;
+  gap: 4.2rem;
+  align-items: center;
+}
+.tailored-middle > div {
+  display: flex;
+  gap: 0.8rem;
+  align-items: center;
+}
+.tailored-middle > div img {
+  width: 4rem;
+}
+.tailored-middle > div p {
+  font-size: 1.3rem;
+  line-height: 1.45;
+  text-transform: uppercase;
+}
+.tailored-end img {
+  width: 64rem;
+}
+#tailoredSlider .carousel-indicators {
+  bottom: -7rem;
+}
+#tailoredSlider .carousel-indicators button {
+  background-size: 6rem;
+  opacity: 1;
+  background-repeat: no-repeat;
+  width: 9rem;
+  height: 1rem;
+  text-indent: 0;
+  position: relative;
+  display: block;
+}
+#tailoredSlider .carousel-indicators button span {
+  position: absolute;
+  top: -0.7rem;
+}
+#tailoredSlider .carousel-indicators button.active span {
+  top: -1.1rem;
+}
+#tailoredSlider .carousel-indicators button:first-child {
+  background-image: url(../img/icon/slide-prev.svg);
+  background-position: left;
+  text-align: right;
+}
+#tailoredSlider .carousel-indicators button:first-child span {
+  right: 0.2rem;
+}
+#tailoredSlider .carousel-indicators button:last-child {
+  background-image: url(../img/icon/slide-next.svg);
+  background-position: right;
+}
+#tailoredSlider .carousel-indicators button.active {
+  font-size: 2rem;
+}
+#tailoredSlider .carousel-indicators button:last-child span {
+  left: 0.2rem;
+}
+/*======================
+    Review Css
+========================*/
+.review-sec {
+  padding: 12.8rem 0;
+  overflow-x: hidden;
+  background-color: #e3edda80;
+}
+.review-sec .section-title {
+  margin-bottom: 3.2rem;
+}
+.review-summery {
+  text-align: center;
+}
+.review-summery .google-icon {
+  margin-bottom: 5.6rem;
+}
+.review-summery .google-icon img {
+  width: 12rem;
+}
+.review-summery .review-rating {
+  margin-bottom: 5.6rem;
+}
+.review-summery .review-rating p {
+  font-size: 6.4rem;
+  line-height: 1.05;
+  font-weight: 300;
+}
+.review-summery .review-rating img {
+  width: 6.4rem;
+}
+.review-summery .review-number {
+  margin-bottom: 2.4rem;
+}
+.review-summery .review-number p {
+  font-size: 1.3rem;
+  line-height: 1.45;
+}
+.review-content {
+  height: 48.5rem;
+  padding: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: var(--white);
+  color: var(--kombu-green);
+}
+.review-content .review-quote {
+  font-weight: 500;
+  font-size: 4rem;
+}
+.review-content .review-details {
+  font-size: 1.8rem;
+  line-height: 1.35;
+}
+.review-content .review-footer {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+.review-footer .author-img img {
+  width: 14.8rem;
+}
+.review-footer .author-details p {
+  font-size: 1.8rem;
+}
+.review-footer .author-details img {
+  width: 6.4rem;
+}
+.review-slider.owl-carousel .owl-stage-outer {
+  width: 500rem;
+}
+.review-slider.owl-carousel .owl-stage-outer .owl-stage {
+  padding-left: 0 !important;
+}
+.review-slider.owl-carousel .owl-nav {
+  position: absolute;
+  bottom: 3rem;
+  left: -32%;
+}
+.review-slider.owl-carousel .owl-nav button {
+  background-color: transparent;
+}
+.review-slider.owl-carousel .owl-nav button.owl-prev span {
+  background-image: url(../img/icon/prev-small.svg);
+}
+.review-slider.owl-carousel .owl-nav button.owl-next span {
+  background-image: url(../img/icon/next-small.svg);
+}
+.review-slider.owl-carousel .owl-nav button span {
+  display: inline-block;
+  height: 1rem;
+  width: 2rem;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  font-size: 0;
+  background-position: center center;
+  background-size: 2rem;
+}
+/*======================
+    About us Css
+========================*/
+.about-sec {
+  background-color: var(--white);
+  padding: 18rem 0 10rem 0;
+}
+.about-content-wrap {
+  max-width: 109rem;
+  margin: 0 auto;
+}
+.about-img {
+  position: relative;
+}
+.about-img-big {
+  width: 53rem;
+}
+.about-img-small {
+  width: 26rem;
+  position: absolute;
+  bottom: -10rem;
+  right: -6rem;
+}
+.about-content {
+  position: relative;
+  max-width: 41.6rem;
+  margin-left: auto;
+}
+.about-content > img {
+  width: 12.5rem;
+}
+.about-content > * {
+  position: relative;
+  z-index: 1;
+}
+img.about-shape-img {
+  position: absolute;
+  width: 34rem;
+  height: 46rem;
+  left: -15rem;
+  bottom: 0;
+  z-index: 0;
+}
+.about-content h2 {
+  font-size: 1.8rem;
+  font-style: italic;
+  margin-top: 6.5rem;
+}
+.about-content > p {
+  margin: 3rem 0;
+  font-size: 2.4rem;
+  line-height: normal;
+  color: var(--liver-chestnut);
+}
+.about-content > p > i {
+  font-size: 1.8rem;
+  color: var(--dark);
+}
+.about-feature {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.about-feature > div {
+  display: flex;
+  width: 50%;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+.about-feature img {
+  width: 4.8rem;
+  margin-right: 1rem;
+}
+.about-feature p {
+  font-size: 1.3rem;
+  line-height: 1.15;
+  color: var(--kombu-green);
+}
+/*======================
+    Loyalty Css
+========================*/
+.loyalty-sec {
+  background-color: var(--white);
+  padding: 6.4rem 0 12.8rem 0;
+}
+.loyalty-content {
+  text-align: center;
+}
+.loyalty-content span {
+  height: 7.2rem;
+  width: 7.2rem;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--dark);
+  color: var(--white-chocolate);
+  border-radius: 50%;
+  font-size: 2.8rem;
+  font-family: "Branch";
+}
+.loyalty-content p {
+  color: var(--liver-chestnut);
+  font-size: 2.4rem;
+  width: 26rem;
+  margin-top: 2.4rem;
+  margin-right: auto;
+  margin-left: auto;
+}
+.loyalty-mid-col {
+  position: relative;
+}
+.loyalty-mid-col img {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1.6rem;
+}
+.loyalty-sparkle-start {
+  left: 0;
+}
+.loyalty-sparkle-end {
+  right: 0;
+}
+.loyalty-sec .common-btn-wrap {
+  margin-top: 5rem;
+}
+.loyalty-sec .common-btn-wrap .common-btn span {
+  color: var(--liver-chestnut);
+}
+/*======================
+    Category Css
+========================*/
+.category-sec {
+  background-color: var(--white);
+  padding: 6.4rem 0;
+}
+.category-slider-item {
+  padding: 3.2rem 3.29rem;
+  text-align: center;
+  background-color: var(--white-chocolate);
+}
+.category-slider-item img {
+  width: 17.1rem;
+}
+.category-content {
+  margin-top: 1.4rem;
+}
+.category-content h3 {
+  font-size: 1.8rem;
+  line-height: 1.35;
+}
+.category-content p {
+  font-size: 1.1rem;
+  line-height: 1.45;
+  color: var(--liver-chestnut);
+}
+.category-sec .common-btn-wrap {
+  margin-top: 4rem;
+}
+/*======================
+    Branding Css
+========================*/
+.branding-sec {
+  background-color: var(--white);
+  padding: 22.8rem 0 12.8rem 0;
+  /* overflow-x: hidden; */
+}
+.branding-sec .section-title {
+  position: relative;
+  max-width: 56rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+.branding-sec .branding-img {
+  position: absolute;
+}
+.branding-sec .branding-1 {
+  width: 10.8rem;
+  top: 0;
+  left: -15rem;
+}
+.branding-sec .branding-2 {
+  width: 16.8rem;
+  top: -17rem;
+  left: 4rem;
+}
+.branding-sec .branding-3 {
+  width: 13.2rem;
+  top: -8rem;
+  right: -11rem;
+}
+.branding-sec .branding-4 {
+  width: 15rem;
+  left: -6rem;
+  bottom: 4rem;
+}
+.branding-sec .branding-5 {
+  width: 12.3rem;
+  left: 6rem;
+  bottom: -13rem;
+}
+.branding-sec .branding-6 {
+  width: 20rem;
+  right: -6rem;
+  bottom: -1rem;
+}
+.branding-sec .branding-7 {
+  width: 9.5rem;
+  right: -19rem;
+  bottom: -6rem;
+}
+.branding-sec .section-title h2 {
+  margin-bottom: 3.5rem;
+}
+.branding-sec .section-title h3 {
+  font-size: 20rem;
+  font-weight: normal;
+  color: var(--liver-chestnut);
+  font-family: "Branch";
+}
+.branding-sec .section-title .social-icon a {
+  display: inline-flex;
+  width: 8.6rem;
+  height: 5.8rem;
+  justify-content: center;
+  align-items: center;
+  border: 0.1rem solid var(--kombu-green);
+  border-radius: 50rem;
+  margin-right: 0.5rem;
+}
+.branding-sec .section-title .social-icon a img {
+  height: 1.8rem;
+}
+
+/*======================
+    Article Css
+========================*/
+.article-sec {
+  padding: 6.4rem 0;
+  background-color: var(--white);
+}
+
+.article-sec article .article-img {
+  overflow: hidden;
+}
+.article-sec article .article-img img {
+  width: 100%;
+  height: 29rem;
+  transition: 0.8s ease-in-out;
+}
+.article-sec article:hover .article-img img {
+  transform: scale(1.2);
+}
+.article-sec article .article-meta {
+  margin-top: 2.4rem;
+}
+.article-sec article .article-meta h3 a {
+  font-size: 2.4rem;
+  line-height: 1.25;
+  color: var(--dark);
+}
+.article-sec article .article-meta > div {
+  display: flex;
+  gap: 1.6rem;
+  margin-top: 1.6rem;
+}
+.article-sec article .article-meta > div p {
+  font-size: 1.1rem;
+  line-height: 1.45;
+  color: var(--liver-chestnut);
+  text-transform: uppercase;
+}
+.article-sec article .article-meta > div a {
+  font-size: 1.1rem;
+  line-height: 1.45;
+  color: var(--liver-chestnut);
+}
+.article-sec .common-btn-wrap {
+  margin-top: 4rem;
+}
+/*======================
+    FAQ Css
+========================*/
+.faq-sec {
+  background-color: var(--white);
+  padding: 12.8rem 0;
+}
+.faq-wrap {
+  max-width: 109rem;
+  margin: auto;
+}
+.faq-content-wrap {
+  padding-right: 3rem;
+}
+.faq-content {
+  border-bottom: 0.1rem solid var(--gray);
+}
+.faq-content button {
+  display: flex;
+  border: none;
+  background-color: transparent;
+  font-size: 2.4rem;
+  line-height: 1.25;
+  font-weight: normal;
+  padding: 2.4rem 0;
+  justify-content: space-between;
+  width: 100%;
+  text-align: left;
+}
+.faq-content button > span {
+  width: 90%;
+}
+.faq-content button > div {
+  position: relative;
+  height: 2.6rem;
+  width: 2.6rem;
+}
+.faq-content button > div span {
+  height: 0.1rem;
+  width: 2.6rem;
+  background-color: black;
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+}
+.faq-content button > div span.faq-line-1 {
+  height: 0.15rem;
+}
+.faq-content button > div span.faq-line-2 {
+  transform: rotate(90deg);
+  transition: 0.3s ease-in-out;
+}
+.faq-content button[aria-expanded="true"] span.faq-line-2 {
+  transform: rotate(0deg);
+}
+.faq-content .faq-body {
+  margin-bottom: 4rem;
+}
+.faq-img img {
+  width: 100%;
+}
+/*======================
+    Footer Css
+========================*/
+footer {
+  background-color: var(--white-chocolate);
+  padding: 6.4rem 0;
+  position: relative;
+}
+footer .footer-shape {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 38rem;
+  transform: translateX(-50%);
+}
+footer .footer-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 7rem 0;
+  border-bottom: 0.1rem solid #4e413814;
+}
+.footer-top .social-icon a {
+  display: inline-flex;
+  width: 5.4rem;
+  height: 4.6rem;
+  justify-content: center;
+  align-items: center;
+  border: 0.1rem solid var(--kombu-green);
+  border-radius: 50rem;
+  margin-right: 0.5rem;
+}
+.footer-top .social-icon a img {
+  height: 1.8rem;
+}
+.footer-logo img {
+  width: 15rem;
+}
+.footer-contact a {
+  font-size: 1.8rem;
+  display: block;
+  text-align: end;
+}
+footer .footer-middle {
+  padding: 7rem 0;
+}
+.footer-link h3 {
+  font-size: 1.8rem;
+  font-style: italic;
+  font-weight: 300;
+}
+.footer-link ul {
+  margin-top: 3.8rem;
+}
+.footer-link li {
+  margin-bottom: 1.6rem;
+}
+.footer-link li a {
+  line-height: 1.45;
+  display: block;
+}
+.footer-middle .row > div {
+  padding: 0;
+}
+.footer-middle .the-purchase {
+  max-width: 20rem;
+}
+.footer-middle .footer-review {
+  max-width: 10rem;
+  margin: auto;
+}
+.footer-middle .about-company {
+  max-width: 15rem;
+  margin-left: auto;
+}
+.footer-middle .footer-form {
+  max-width: 42rem;
+  margin-left: auto;
+}
+.footer-middle .footer-form form {
+  margin-top: 3rem;
+  border-bottom: 0.1rem solid;
+}
+.footer-middle .footer-form form > div {
+  justify-content: space-between;
+}
+.footer-middle .footer-form form > div:first-child {
+  width: 100%;
+}
+.footer-form form input.form-control {
+  background: transparent;
+  padding: 1rem 0 1.5rem 0;
+  border: 0;
+  font-size: 1.8rem;
+}
+.footer-form form input.form-control::placeholder {
+  font-size: 1.8rem;
+  line-height: 1.35;
+  color: var(--dark);
+}
+.footer-form form input.form-control:focus {
+  box-shadow: none;
+}
+.footer-form form button {
+  background-color: transparent;
+  border: none;
+}
+.footer-form form button img {
+  width: 6rem;
+}
+.footer-form.footer-link p {
+  max-width: 28rem;
+  font-size: 1.2rem;
+  line-height: 1.45;
+  margin-top: 2.4rem;
+}
+.footer-form.footer-link p a {
+  text-decoration: underline;
+}
+footer .footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 7rem;
+}
+
+/* Important css */
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.row {
+  margin-left: -15px;
+  margin-right: -15px;
+}
+.row > div {
+  padding-right: 15px;
+  padding-right: 15px;
+}
